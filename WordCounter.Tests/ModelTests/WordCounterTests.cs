@@ -48,7 +48,7 @@ namespace WordCounter.Tests
       Word word = new Word("testTwo","    testOne testTwo testtwo testTwo test    ");
       Assert.AreEqual(2,word.Count());
     }
-    //Trun Case sensitive off
+    //Turn Case sensitive off
     [TestMethod]
     public void Return_testTwo_4_cs_Test_Seven()
     {

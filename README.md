@@ -17,20 +17,26 @@
     * Used for counting number of times a word exist in a string of words.
   * Test Cases:
     * Calling Default() on a Word object should return true.
-    * Input: (string "testOne",string "testOne testTwo")
-      * Output: int 1
+    * Input: ("testOne","testOne testTwo")
+      * Output: 1
       * Basic test.
-    * Input: (string "testTwo",string "testOne testTwo testtwo")
-      * Output: int 1
+    * Input: ("testTwo","testOne testTwo testtwo")
+      * Output: 1
       * Make sure to be case sensitive.
-    * Input: (string "testTwo",string[] {"testOne","testTwo","testtwo"})
-      * Output: int 1
+    * Input: ("testTwo",{"testOne","testTwo","testtwo"})
+      * Output: 1
       * Allows user inputing an array of strings instead of a string of words.
-    * Input: (string "testTwo",string "testOne testTwo testtwo testTwo test")
-      * Output: int 2
+    * Input: ("testTwo","testOne testTwo testtwo testTwo test")
+      * Output: 2
       * Wholes words only
-    * Input: (string "testTwo",string "    testOne testTwo testtwo testTwo test    ")
-      * Output: int 2
+    * Input: ("testTwo","    testOne testTwo testtwo testTwo test    ")
+      * Output: 2
+      * Whitespace shouldn't matter
+    * Input: ("testTwo","testOne testTwo testtwo testTwo test teSTtWO") and Count(false)
+      * Output: 4
+      * Overload Count() to accept boolean to turn Case Sensitivity off
+    * Input: (string "",string ""  1    1  "")
+      * Output: 0
       * Whitespace shouldn't matter
 
 ## Requirements
