@@ -26,10 +26,10 @@
     * Input: (string "testTwo",string[] {"testOne","testTwo","testtwo"})
       * Output: int 1
       * Allows user inputing an array of strings instead of a string of words.
-    * Input: (string "testTwo",string "testOne testTwo testtwo testOne test")
+    * Input: (string "testTwo",string "testOne testTwo testtwo testTwo test")
       * Output: int 2
       * Wholes words only
-    * Input: (string "testTwo",string "    testOne testTwo testtwo testOne test    ")
+    * Input: (string "testTwo",string "    testOne testTwo testtwo testTwo test    ")
       * Output: int 2
       * Whitespace shouldn't matter
 

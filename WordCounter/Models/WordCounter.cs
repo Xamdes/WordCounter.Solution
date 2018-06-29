@@ -49,7 +49,15 @@ namespace WordCounter.Models
   {
     public static int Count(string word, string[] wordList)
     {
-      return 1;
+      int count = 0;
+      foreach (string w in wordList)
+      {
+        if(w==word)
+        {
+          count++;
+        }
+      }
+      return count;
     }
   }
 }

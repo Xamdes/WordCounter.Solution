@@ -34,26 +34,26 @@ namespace WordCounter.Tests
     public void Return_testTwo_1()
     {
       Word word = new Word("testTwo","testOne testTwo testtwo");
-      Assert.AreEqual(true,word.Default());
+      Assert.AreEqual(1,word.Count());
     }
     [TestMethod]
     public void Return_testTwo_1_Array()
     {
       string[] testArray = {"testOne","testTwo","testtwo"};
       Word word = new Word("testTwo",testArray);
-      Assert.AreEqual(true,word.Default());
+      Assert.AreEqual(1,word.Count());
     }
     [TestMethod]
     public void Return_testTwo_2()
     {
-      Word word = new Word("testTwo","testOne testTwo testtwo testOne test");
-      Assert.AreEqual(true,word.Default());
+      Word word = new Word("testTwo","testOne testTwo testtwo testTwo test");
+      Assert.AreEqual(2,word.Count());
     }
     [TestMethod]
     public void Return_testTwo_2_ws()
     {
-      Word word = new Word("testTwo","    testOne testTwo testtwo testOne test    ");
-      Assert.AreEqual(true,word.Default());
+      Word word = new Word("testTwo","    testOne testTwo testtwo testTwo test    ");
+      Assert.AreEqual(2,word.Count());
     }
 
   }
