@@ -6,13 +6,13 @@
 
 ## Date
 
-06/29/2018
+  * 06/29/2018
 
 ## Specifications
 
   * Create Word Class
     * Word Contains the word to search for and the list of words to search against.
-    * User input two strings with the first string used too search through a list created from the second string.
+    * User input two strings with the first string used to search through a list created from the second string.
   * RepeatCounter class
     * Used for counting number of times a word exist in a string of words.
   * Test Cases:
