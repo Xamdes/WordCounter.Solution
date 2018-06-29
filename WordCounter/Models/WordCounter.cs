@@ -45,7 +45,8 @@ namespace WordCounter.Models
     }
   }
 
-  public static class RepeatCounter
+  //Using internal restricts access to just classes within the namespace
+  internal static class RepeatCounter
   {
     public static int Count(string word, string[] wordList)
     {
