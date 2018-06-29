@@ -35,7 +35,11 @@ namespace WordCounter.Models
 
     public int Count()
     {
-      return RepeatCounter.Count(_word,_wordList);
+      return RepeatCounter.Count(_word,_wordList,true);
+    }
+    public int Count(bool caseSensitive)
+    {
+      return RepeatCounter.Count(_word,_wordList,caseSensitive);
     }
 
     //Check if Unit Test setup correctly
@@ -48,12 +52,26 @@ namespace WordCounter.Models
   //Using internal restricts access to just classes within the namespace
   internal static class RepeatCounter
   {
-    public static int Count(string word, string[] wordList)
+    public static int Count(string word, string[] wordList,bool caseSensitive)
     {
+      if(wordList.Length==1&&wordList[0]==""||word.Trim() == "")
+      {
+        return 0;
+      }
       int count = 0;
+      if(!caseSensitive)
+      {
+        word = word.ToLower();
+      }
+      string compareWord;
       foreach (string w in wordList)
       {
-        if(w==word)
+        compareWord = "";
+        if(!caseSensitive)
+        {
+          compareWord = w.ToLower();
+        }
+        if(w==word||compareWord==word)
         {
           count++;
         }
