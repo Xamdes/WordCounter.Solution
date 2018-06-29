@@ -7,29 +7,49 @@ namespace WordCounter.Models
   public class Word
   {
     private string _word;
-    private List<string> _wordList;
+    private string[] _wordList;
 
     public Word()
     {
       _word = "";
-      _wordList = new List<string>(){};
     }
 
-    public Word(string word, List<string> wordList)
+    public Word(string word, string[] wordList)
     {
       _word = word;
       _wordList = wordList;
     }
 
+    public Word(string word, string wordList)
+    {
+      _word = word;
+      wordList = wordList.Trim();
+      _wordList = wordList.Split(' ');
+    }
+
     public void Clear()
     {
       _word = "";
-      _wordList = new List<string>(){};
+      _wordList = null;
     }
+
+    public int Count()
+    {
+      return RepeatCounter.Count(_word,_wordList);
+    }
+
     //Check if Unit Test setup correctly
     public bool Default()
     {
       return true;
+    }
+  }
+
+  public static class RepeatCounter
+  {
+    public static int Count(string word, string[] wordList)
+    {
+      return 1;
     }
   }
 }

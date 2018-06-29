@@ -23,15 +23,16 @@
     * Input: (string "testTwo",string "testOne testTwo testtwo")
       * Output: int 1
       * Make sure to be case sensitive.
-    * Input: (string "testTwo",List<string> {"testOne","testTwo","testtwo"})
+    * Input: (string "testTwo",string[] {"testOne","testTwo","testtwo"})
       * Output: int 1
-      * Allows user inputing a list of strings instead of a string of words.
+      * Allows user inputing an array of strings instead of a string of words.
     * Input: (string "testTwo",string "testOne testTwo testtwo testOne test")
       * Output: int 2
       * Wholes words only
     * Input: (string "testTwo",string "    testOne testTwo testtwo testOne test    ")
       * Output: int 2
       * Whitespace shouldn't matter
+
 ## Requirements
 
 Your mission is to create a program that checks how frequently a word appears in a given string. The user should input both the word and a list of words to check. Check for full word matches only.   
