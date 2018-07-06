@@ -8,10 +8,12 @@ namespace WordCounter.Models
   {
     private string _word;
     private string[] _wordList;
+    private static Word _currentWord = new Word();
 
     public Word()
     {
       _word = "";
+      _wordList = new string[1];
     }
 
     public Word(string word, string[] wordList)
@@ -35,11 +37,35 @@ namespace WordCounter.Models
 
     public int Count()
     {
+      if(_word == "")
+      {
+        return -1;
+      }
       return RepeatCounter.Count(_word,_wordList,true);
     }
     public int Count(bool caseSensitive)
     {
       return RepeatCounter.Count(_word,_wordList,caseSensitive);
+    }
+
+    public string GetWord()
+    {
+      return _word;
+    }
+
+    public string[] GetList()
+    {
+      return _wordList;
+    }
+
+    public void Save()
+    {
+      _currentWord = this;
+    }
+
+    public static Word GetCurrentWord()
+    {
+      return _currentWord;
     }
 
     //Check if Unit Test setup correctly
