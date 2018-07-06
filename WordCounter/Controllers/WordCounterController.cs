@@ -9,7 +9,7 @@ namespace WordCounter.Controllers
 
   public class WordCounterController : Controller
   {
-    [HttpGet("/")]
+    [HttpGet("/wordcounter")]
     public ActionResult Index()
     {
       return View();

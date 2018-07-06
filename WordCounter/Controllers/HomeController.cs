@@ -31,5 +31,11 @@ namespace WordCounter.Controllers
         {
             return View();
         }
+
+        [HttpGet("/")]
+        public ActionResult Home()
+        {
+          return View();
+        }
     }
 }
